@@ -7,11 +7,8 @@
     <template v-else>
       <ul>
 
-        <li v-for="(perso, id) in persos" :key="id">
+        <li v-for="(perso, index) in persos" :key="index">
           {{ perso.name }}     
-          <button type="button">
-            Détails
-          </button>
         </li>
 
       </ul>
@@ -57,8 +54,7 @@ export default {
       isLoading: true,
       persos: [],
       page: 1,
-      totalCount: 0,
-      activePerso: undefined,
+      totalCount: 0
     };
   },
   //Permet d'empecher d'aller avant la page 1 + permet de segmenter le resultat en pages de 11 a chaque fois
@@ -90,7 +86,7 @@ export default {
           },
         })
         .then((response) => {
-          this.persos = response.data.results;
+          this.persos = response.data;
           this.totalCount = response.data.count;
         })
         .catch((error) => {

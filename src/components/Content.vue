@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import MarvelList from "./MarvelList.vue"; 
+import MarvelList from "./MarvelList.vue";
 
 export default {
   name: "Content",
   components: {
-    MarvelList,
+    MarvelList
   }
 };
 </script>
