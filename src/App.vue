@@ -1,22 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <header>
+    <h1>Projet Marvel</h1>
+  </header>
+  <Content /> <!-- On inclut le component Content dans notre Appli -->
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import Content from "./components/Content.vue";
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+export default {
+  name: "App",
+  components: {
+    Content,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
