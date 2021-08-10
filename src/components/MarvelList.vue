@@ -86,7 +86,7 @@ export default {
           },
         })
         .then((response) => {
-          this.persos = response.data;
+          this.persos = response.data.data.results;
           this.totalCount = response.data.count;
         })
         .catch((error) => {
